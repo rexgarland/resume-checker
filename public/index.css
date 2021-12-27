@@ -1,0 +1,27 @@
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+#dropzone {
+	width: 300px;
+	height: 300px;
+	border-radius: 30px;
+	border: 4px dashed gainsboro;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: gainsboro;
+
+	font-size: 16pt;
+
+	transition: transform 0.2s;
+}
