@@ -93,3 +93,4 @@ dist
 **/*.sublime-workspace
 
 data
+experiments
