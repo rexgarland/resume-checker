@@ -4,8 +4,10 @@
   "description": "",
   "main": "comparison.js",
   "scripts": {
-    "build": "webpack",
-    "start": "npm run build",
+    "serve": "rsync -avz public/ dist/ && light-server -s dist -p 8000",
+    "build:score": "browserify src/score.js --standalone score -o dist/score.js",
+    "build:parse": "browserify src/parse.js --standalone parse -o dist/parse.js",
+    "build": "npm run build:score && npm run build:parse",
     "test": "jest"
   },
   "author": "",
@@ -13,6 +15,7 @@
   "devDependencies": {
     "jest": "^27.4.5",
     "pdfjs-dist": "^2.12.313",
+    "tinyify": "^3.0.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.1"

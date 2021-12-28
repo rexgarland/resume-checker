@@ -28,26 +28,13 @@ const path = require('path');
 // };
 
 module.exports = {
-  target: 'node',
+  target: 'webworker',
   mode: 'development',
   entry: './src/alg.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'alg.js',
     library: 'alg'
-  },
-  module: {
-    rules: [
-      {
-        include: path.resolve(__dirname, "node_modules/canvas"),
-        use: "null-loader"
-      }
-    ],
-  },
-  externals: {
-    // canvas: "commonjs canvas", // Important (2)
-    bufferutil: "commonjs bufferutil",
-    "utf-8-validate": "commonjs utf-8-validate"
   },
   devtool: 'inline-cheap-module-source-map',
   optimization: {
